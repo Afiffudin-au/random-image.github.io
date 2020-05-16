@@ -74,7 +74,7 @@ img{
   .images {
   text-align: center;
   display: block;
-  column-count:2;
+  column-count:1;
   }
   .input-box{
     width: 80%;
