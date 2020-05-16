@@ -84,7 +84,7 @@ button.addEventListener('click',function () {
           //Eng = get random number and save in variable w,h
           //Ind = mendapatkan random number dan disimpkan ke variable w,h
 
-          //Eng = width input empty ,set default w = 
+          //Eng = width input empty ,set default w = 400
           //Ind = input lebar kosong, atur default w = 400
           let w = getRandomSize(400,heightInput);
           let h = getRandomSize(400,heightInput);
