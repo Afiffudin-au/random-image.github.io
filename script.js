@@ -16,100 +16,120 @@ button.addEventListener('click',function () {
         note.style.display = 'none';
       },1300);
      
-      //check H or W , if same return;
-      // if(heightInput==''){
-      //   alert('Please Input widht and height');
-      //   return;
-      // }
-      // if(widthInput==''){
-      //   alert('Please Input widht and height');
-      //   return;
-      // }
-      //check H or W < 100, if true return;
-      //Cek number null or not,if null return
+      // Eng = Check number  empty or not,if  empty return
+      // Ind = Periksa angka nol atau tidak, jika kosong kembali
       if(number == ''){
         alert('Please Input Count Image');
         return;
       }
 
-
+      //Eng = check height input and width input empty or not ,if empty run
+      //Ind  = periksa tinggi input dan lebar input kosong atau tidak, jika kosong dijalankan
       if(heightInput == '' && widthInput==''){
         for(let i = 1; i<=number; i++){
-          console.log('width and heigh kosong');
-          //create element img
+          console.log('Empty width and height');
+          //Eng = create element img
+          //Ind = membuat element img
           const image = document.createElement('img');
-          //get random number and save in variable w,h
+          //Eng = get random number and save in variable w,h
+          //Ind = mendapatkan random number dan disimpkan ke variable w,h
+          //Eng = height input and width input empty ,set default value w = 200,h = 400
           let w = getRandomSize(200,400);
           let h = getRandomSize(200,400);
-          //create variable and fill in[url];
-          //https://source.unsplash.com/1600x900/?nature,water
+          //Eng = create variable and fill in[url];
+          //Ind = Membuat variable dan isi [url] 
           let href = 'https://source.unsplash.com/random/';   
-          //set attribute element image  
+          //Eng = set attribute element image  
+          //Ind = set attribute element image
           image.setAttribute('src',href+w+'x'+h+'/?'+catagory);       
-          //images appendChild image ,not married but have children code not impossible , hahah i joke 
+          //images appendChild image
           images.appendChild(image);
         }
         return;
       }
+       // Eng = Check height empty or not
+       // Ind = Periksa ketinggian kosong atau tidak,
       if(heightInput == ''){
         for(let i = 1; i<=number; i++){
-          console.log('height kosong');
+          console.log('empty height');
           //create element img
+          //Ind = membuat element img
           const image = document.createElement('img');
-          //get random number and save in variable w,h
+          //Eng = get random number and save in variable w,h
+          //Ind = mendapatkan random number dan disimpkan ke variable w,h
+
+          //Eng = height input empty ,set default h = 400
+          //Ind = input tinggi kosong, atur default h = 400
           let w = getRandomSize(widthInput,400);
           let h = getRandomSize(widthInput,400);
-          //create variable and fill in[url];
-          //https://source.unsplash.com/1600x900/?nature,water
-          let href = 'https://source.unsplash.com/random/';   
-          //set attribute element image  
+          //Eng = create variable and fill in[url];
+          //Ind = Membuat variable dan isi [url] 
+          let href = 'https://source.unsplash.com/random/'; 
+          //Eng = set attribute element image  
+          //Ind = set attribute element image  
           image.setAttribute('src',href+w+'x'+h+'/?'+catagory);       
-          //images appendChild image ,not married but have children code not impossible , hahah i joke 
+           //images appendChild image
           images.appendChild(image);
         }
         return;
       }
+     // Eng = Check width empty or not
+      // Ind = Periksa lebar kosong atau tidak
       if(widthInput==''){
         for(let i = 1; i<=number; i++){
-          console.log('width kosong');
+          console.log('empty width');
           //create element img
+          //Ind = membuat element img
           const image = document.createElement('img');
-          //get random number and save in variable w,h
+          //Eng = get random number and save in variable w,h
+          //Ind = mendapatkan random number dan disimpkan ke variable w,h
+
+          //Eng = width input empty ,set default w = 
+          //Ind = input lebar kosong, atur default w = 400
           let w = getRandomSize(400,heightInput);
           let h = getRandomSize(400,heightInput);
-          //create variable and fill in[url];
-          //https://source.unsplash.com/1600x900/?nature,water
+          //Eng = create variable and fill in[url];
+          //Ind = Membuat variable dan isi [url] 
           let href = 'https://source.unsplash.com/random/';   
-          //set attribute element image  
+          //Eng = set attribute element image  
+          //Ind = set attribute element image  
           image.setAttribute('src',href+w+'x'+h+'/?'+catagory);       
-          //images appendChild image ,not married but have children code not impossible , hahah i joke 
+          //images appendChild image
           images.appendChild(image);
         }
         return;
       }
-
+      
       if(heightInput==widthInput && widthInput==heightInput){
         alert('Please Input Not Same,between widht and height');
         return;
       }
       if(heightInput<100 && widthInput<100){
         alert('Recommended Input Height Or Width >100');
-        // return; 
       }
+
+      //Eng = width and height not empty
+      //Ind = lebar dan tinggi tidak kosong
       if(widthInput != '' && heightInput != ' '){
         for(let i = 1; i<=number; i++){
-          console.log('width and height tidak kosong')
+          console.log('width and height are not empty')
           //create element img
+          //Ind = membuat element img
           const image = document.createElement('img');
-          //get random number and save in variable w,h
+          //Eng = get random number and save in variable w,h
+          //Ind = mendapatkan random number dan disimpkan ke variable w,h
+
+          //Eng = width and height not empty , set default input user
+          //Ind = lebar dan tinggi tidak kosong, tetapkan pengguna input default
           let w = getRandomSize(widthInput,heightInput);
           let h = getRandomSize(widthInput,heightInput);
-          //create variable and fill in[url];
-          //https://source.unsplash.com/1600x900/?nature,water
+          //Eng = create variable and fill in[url];
+          //Ind = Membuat variable dan isi [url]
           let href = 'https://source.unsplash.com/random/';   
-          //set attribute element image  
+           //Eng = set attribute element image  
+          //Ind = set attribute element image    
           image.setAttribute('src',href+w+'x'+h+'/?'+catagory);       
-          //images appendChild image ,not married but have children code not impossible , hahah i joke 
+           //images appendChild image
           images.appendChild(image);
         }
         return;
